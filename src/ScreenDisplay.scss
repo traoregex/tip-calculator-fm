@@ -1,0 +1,61 @@
+@import 'color';
+
+.screen {
+    background-color: $veryDark;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 40px;
+    justify-content: space-between;
+
+    .output {
+
+        span {
+            display: block;
+        }
+
+        .main-label {
+            color: $white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .secondary-label {
+            color: $darkPrimary;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .pricetag {
+            color: $primary;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .output:last-child {
+        margin-top: 40px;
+    }
+
+    .bottom {
+        button {
+            height: 48px;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            color: $veryDark;
+            background-color: $primary;
+            box-shadow: none;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
