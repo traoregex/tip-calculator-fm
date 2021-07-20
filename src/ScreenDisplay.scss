@@ -24,7 +24,7 @@
         }
 
         .secondary-label {
-            color: $darkPrimary;
+            color: $darkSecondary;
             font-weight: bold;
             font-size: 12px;
         }
@@ -52,10 +52,15 @@
             font-size: 18px;
             font-weight: bold;
             color: $veryDark;
-            background-color: $primary;
+            background-color: $blank;
             box-shadow: none;
             border: none;
             border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $hover !important;
+            }
         }
     }
 }

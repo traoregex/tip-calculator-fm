@@ -31,7 +31,7 @@ function ScreenDisplay(props) {
                 </div>
             </div>
             <div className="bottom">
-                <button onClick={() => reset()}>Reset</button>
+                <button id={tip!=='0.00' ? 'active-state' : 'blank'} onClick={() => reset()}>Reset</button>
             </div>
         </div>
     );

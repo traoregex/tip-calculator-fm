@@ -1,6 +1,7 @@
 
 import './App.scss';
 import BillBox from './BillBox';
+import PeopleBox from './PeopleBox';
 import RatioList from './RatioList';
 import ScreenDisplay from './ScreenDisplay';
 
@@ -16,6 +17,7 @@ function App() {
           <div className="control">
             <BillBox />
             <RatioList />
+            <PeopleBox />
           </div>
           <div className="display">
             <ScreenDisplay tip={4.27} total={32.79} />
@@ -23,7 +25,7 @@ function App() {
         </div>
       </div>
       <div class="attribution">
-        Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
         Coded by <a rel="noreferrer" href="https://github.com/traoregex/tip-calculator-fm">TRAORE Geraud Lionel</a>.
       </div>
     </div>

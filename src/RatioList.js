@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomRatio from './CustomRatio';
 import FixedRatio from './FixedRatio';
 import './RatioList.scss';
 
@@ -13,6 +14,7 @@ function RatioList() {
                 <FixedRatio ratio={15} />
                 <FixedRatio ratio={25} />
                 <FixedRatio ratio={50} />
+                <CustomRatio />
             </div>
         </div>
     );

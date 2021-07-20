@@ -10,5 +10,11 @@
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
-    height: 48px;
+    height: 58px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $hover;
+        color: $veryDark;
+    }
 }

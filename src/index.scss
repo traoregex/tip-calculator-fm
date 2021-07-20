@@ -23,3 +23,42 @@ code {
   display: block;
   padding-bottom: 5px;
 }
+
+.error-label {
+  color: orangered;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 5px;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $darkSecondary;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $darkSecondary;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $darkSecondary;
+} 
+
+#active-state {
+  background-color: $primary;
+  color: $veryDark;
+}
+
+#inactive-state {
+  background-color: $blank;
+  color: $veryDark;
+}
+
+.error-input {
+  border: solid 2px orangered !important;
+}
+
+.hide {
+  display: none;
+}

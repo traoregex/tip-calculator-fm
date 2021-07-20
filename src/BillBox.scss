@@ -21,11 +21,13 @@ input[type=number] {
     border-radius: 5px;
     overflow: hidden;
     color: $darkSecondary;
+    border: solid 2px transparent;
 
     justify-content: space-between;
+    align-items: center;
 
     input {
-        color: $darkSecondary;
+        color: $veryDark;
         text-align: end;
         border-radius: 5px;
         overflow: hidden;
@@ -41,5 +43,18 @@ input[type=number] {
             outline: none;
             box-shadow: none;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .medium {
+        font-size: 18px;
+    }
+
+    &:hover {
+        border: solid 2px $primary;
+        cursor: pointer;
     }
 }
