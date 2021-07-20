@@ -1,15 +1,5 @@
 @import "color";
-
-@font-face {
-  font-family: spaceMono;
-  src: url(./assets/fonts/SpaceMono-Regular.ttf);
-}
-
-@font-face {
-  font-family: spaceMono;
-  src: url(./assets/fonts/SpaceMono-Bold.ttf);
-  font-weight: bold;
-}
+@import "fonts"; 
 
 body {
   margin: 0;
@@ -25,4 +15,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.i-label {
+  color: $veryDark;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 5px;
 }

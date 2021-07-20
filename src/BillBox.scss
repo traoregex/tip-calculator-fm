@@ -1,0 +1,45 @@
+@import 'fonts';
+@import 'color';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.c-input {
+    display: flex;
+    font-size: 24px;
+    background-color: $lightSecondary;
+    padding: 10px 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: $darkSecondary;
+
+    justify-content: space-between;
+
+    input {
+        color: $darkSecondary;
+        text-align: end;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: none;
+        font-size: 24px;
+        font-family: 'spaceMono';
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+
+    
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

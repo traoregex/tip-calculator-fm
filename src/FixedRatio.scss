@@ -1,0 +1,14 @@
+@import 'color';
+
+.ratio {
+    background-color: $veryDark;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 48px;
+}

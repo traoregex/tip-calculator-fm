@@ -1,5 +1,7 @@
 
 import './App.scss';
+import BillBox from './BillBox';
+import RatioList from './RatioList';
 import ScreenDisplay from './ScreenDisplay';
 
 function App() {
@@ -12,7 +14,8 @@ function App() {
         </h1>
         <div className="calculator">
           <div className="control">
-            left
+            <BillBox />
+            <RatioList />
           </div>
           <div className="display">
             <ScreenDisplay tip={4.27} total={32.79} />
