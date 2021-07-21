@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './ScreenDisplay.scss';
 
 
-function ScreenDisplay(props) {
-    const [tip, setTip] = useState(props.tip ? props.tip : '0.00');
-    const [total, setTotal] = useState(props.total ? props.total : '0.00');
+function ScreenDisplay({tip, total, reset}) {
+    // const [tip, setTip] = useState(displayTip ? displayTip : '0.00');
+    // const [total, setTotal] = useState(displayTotal ? displayTotal : '0.00');
 
-    function reset() {
-        setTip('0.00');
-        setTotal('0.00');
-        console.log('clicked')
-    }
+    // function reset() {
+    //     setTip('0.00');
+    //     setTotal('0.00');
+    //     console.log('clicked')
+    // }
 
     return (
         <div className="screen">
@@ -31,7 +31,7 @@ function ScreenDisplay(props) {
                 </div>
             </div>
             <div className="bottom">
-                <button id={tip!=='0.00' ? 'active-state' : 'blank'} onClick={() => reset()}>Reset</button>
+                <button id={tip!=='0.00' ? 'active-state' : 'blank'} onClick={reset}>Reset</button>
             </div>
         </div>
     );

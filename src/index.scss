@@ -62,3 +62,7 @@ code {
 .hide {
   display: none;
 }
+
+.active-input {
+  border: solid 2px $primary !important;
+}
