@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ScreenDisplay.scss';
 
 
 function ScreenDisplay({tip, total, reset}) {
-    // const [tip, setTip] = useState(displayTip ? displayTip : '0.00');
-    // const [total, setTotal] = useState(displayTotal ? displayTotal : '0.00');
-
-    // function reset() {
-    //     setTip('0.00');
-    //     setTotal('0.00');
-    //     console.log('clicked')
-    // }
+    console.log('tip from screen ', tip);
 
     return (
         <div className="screen">

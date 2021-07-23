@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './PeopleBox.scss';
 
-function PeopleBox() {
+function PeopleBox({getDataInput}) {
     const [error, setError] = useState(false);
 
     const getValue = (event) => {
@@ -13,6 +13,7 @@ function PeopleBox() {
             setError(true);
         } else {
             setError(false);
+            getDataInput({type: 'people', value: event.target.value});
         }
     }
 

@@ -3,7 +3,7 @@ import CustomRatio from './CustomRatio';
 import FixedRatio from './FixedRatio';
 import './RatioList.scss';
 
-function RatioList() {
+function RatioList({getDataInput}) {
 
     const [activeRatio, setActiveRatio] = useState('');
 
@@ -13,8 +13,7 @@ function RatioList() {
         } else {
             setActiveRatio(data);
         }
-        console.log(data);
-        console.log(type);
+        getDataInput({type: 'tip', value: data});
     }
     
     return (

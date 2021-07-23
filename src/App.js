@@ -10,17 +10,49 @@ function App() {
 
   const [tip, setTip] = useState('0.00');
   const [total, setTotal] = useState('0.00');
+  const [dataInput] = useState({ inputTip: 0, inputBill: 0, inputPeople: 0 });
   
 
-  const onDisplayData = () => {
-    setTip(10);
-    setTotal(50);
+  const onDisplayData = ({displayTip, displayTotal}) => {
+    setTip(displayTip);
+    setTotal(displayTotal);
   }
 
   const onReset = () => {
     setTip('0.00');
     setTotal('0.00');
-    console.log('Reset')
+  }
+
+  const onGetDataInput = ({ type, value }) => {
+    if (type === 'bill') {
+      dataInput.inputBill = parseFloat(value);
+    }
+
+    if (type === 'tip') {
+      dataInput.inputTip = parseFloat(value);
+    }
+
+    if (type === 'people') {
+      dataInput.inputPeople = parseFloat(value);
+    }
+
+    if (dataInput.inputBill && dataInput.inputPeople && dataInput.inputTip) {
+      console.log('CALCUL');
+      calculate(dataInput);
+    } else {
+      onReset();
+    }
+
+
+    console.log('data input: ', dataInput);
+  }
+
+  const calculate = ({ inputBill, inputPeople, inputTip }) => {
+    const tempTip = ((inputBill * inputTip) / 100) / inputPeople;
+    const tempTipTrunc = Math.trunc( tempTip* 100) / 100;
+    const tempTotal = tempTip + (inputBill / inputPeople);
+    const tempTotalTrunc = tempTotal.toFixed(2);
+    onDisplayData({displayTip: tempTipTrunc, displayTotal: tempTotalTrunc});
   }
 
   return (
@@ -32,9 +64,9 @@ function App() {
         </h1>
         <div className="calculator">
           <div className="control">
-            <BillBox />
-            <RatioList />
-            <PeopleBox />
+            <BillBox getDataInput={onGetDataInput} />
+            <RatioList getDataInput={onGetDataInput} />
+            <PeopleBox getDataInput={onGetDataInput} />
           </div>
           <div className="display">
             <ScreenDisplay tip={tip} total={total} reset={onReset} />
