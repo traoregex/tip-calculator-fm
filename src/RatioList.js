@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CustomRatio from './CustomRatio';
 import FixedRatio from './FixedRatio';
 import './RatioList.scss';
 
-function RatioList({getDataInput}) {
+function RatioList({getDataInput, clear}) {
 
     const [activeRatio, setActiveRatio] = useState('');
 
@@ -15,9 +15,15 @@ function RatioList({getDataInput}) {
         }
         getDataInput({type: 'tip', value: data});
     }
+
+    useEffect(() => {
+        if (clear) {
+            setActiveRatio('');
+        }
+    })
     
     return (
-        <div>
+        <div className="ratio-list-wrapper">
             <span className="i-label">Select Tip %</span>
             <div className="ratio-grid">
                 <FixedRatio activeRatio={activeRatio} updateState={getState} ratio={5} />

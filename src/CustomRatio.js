@@ -3,8 +3,8 @@ import React from 'react';
 function CustomRatio({ activeRatio, updateState }) {
 
     const getRatio = (event) => {
-        console.log(event.target.value);
-        console.log('active ratio: ',activeRatio);
+        // console.log(event.target.value);
+        // console.log('active ratio: ',activeRatio);
         updateState(
             {
                 type: 'custom',

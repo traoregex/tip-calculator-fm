@@ -10,7 +10,8 @@ function App() {
 
   const [tip, setTip] = useState('0.00');
   const [total, setTotal] = useState('0.00');
-  const [dataInput] = useState({ inputTip: 0, inputBill: 0, inputPeople: 0 });
+  const [dataInput, setDataInput] = useState({ inputTip: 0, inputBill: 0, inputPeople: 0 });
+  const [clearInput, setClearInput] = useState(false);
   
 
   const onDisplayData = ({displayTip, displayTotal}) => {
@@ -21,30 +22,43 @@ function App() {
   const onReset = () => {
     setTip('0.00');
     setTotal('0.00');
+
+    setClearInput(true);
+    setDataInput({});
+
+    setTimeout(() => {
+      setClearInput(false);
+    }, 1);
   }
 
   const onGetDataInput = ({ type, value }) => {
     if (type === 'bill') {
       dataInput.inputBill = parseFloat(value);
+      const temp = { ...dataInput };
+      setDataInput(temp);
     }
 
     if (type === 'tip') {
       dataInput.inputTip = parseFloat(value);
+      const temp = { ...dataInput };
+      setDataInput(temp);
     }
 
     if (type === 'people') {
       dataInput.inputPeople = parseFloat(value);
+      const temp = { ...dataInput };
+      setDataInput(temp);
     }
 
     if (dataInput.inputBill && dataInput.inputPeople && dataInput.inputTip) {
-      console.log('CALCUL');
+      // console.log('CALCUL');
       calculate(dataInput);
-    } else {
+    } /*else {
       onReset();
-    }
+    }*/
 
 
-    console.log('data input: ', dataInput);
+    // console.log('data input: ', dataInput);
   }
 
   const calculate = ({ inputBill, inputPeople, inputTip }) => {
@@ -58,18 +72,20 @@ function App() {
   return (
     <div className="flex-center">
       <div className="main-wrapper">
-        <h1>
-          <span className="part-title">spli</span>
-          <span className="part-title">tter</span>
-        </h1>
+        <div className="title-wrapper">
+          <h1>
+            <span className="part-title">spli</span>
+            <span className="part-title">tter</span>
+          </h1>
+        </div>
         <div className="calculator">
           <div className="control">
-            <BillBox getDataInput={onGetDataInput} />
-            <RatioList getDataInput={onGetDataInput} />
-            <PeopleBox getDataInput={onGetDataInput} />
+            <BillBox getDataInput={onGetDataInput} clear={clearInput} />
+            <RatioList getDataInput={onGetDataInput} clear={clearInput} />
+            <PeopleBox getDataInput={onGetDataInput} clear={clearInput} />
           </div>
           <div className="display">
-            <ScreenDisplay tip={tip} total={total} reset={onReset} />
+            <ScreenDisplay dataInput={dataInput} tip={tip} total={total} reset={onReset} />
           </div>
         </div>
       </div>

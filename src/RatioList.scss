@@ -5,3 +5,16 @@
     column-gap: 10px;
     row-gap: 10px;
 }
+
+@media screen and (max-width: 920px) {
+    .ratio-list-wrapper {
+        margin-top: 20px;
+    }
+
+    .ratio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 14px;
+        row-gap: 14px;
+    }
+}

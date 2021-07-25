@@ -23,3 +23,9 @@
     color: $veryDark;
     background-color: $primary;
 }
+
+@media screen and (max-width: 920px) {
+    .ratio {
+        height: 5vh;
+    }
+}

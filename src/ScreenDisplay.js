@@ -2,8 +2,15 @@ import React from 'react';
 import './ScreenDisplay.scss';
 
 
-function ScreenDisplay({tip, total, reset}) {
-    console.log('tip from screen ', tip);
+function ScreenDisplay({tip, total, reset, dataInput}) {
+    // console.log(dataInput);
+    //tip!=='0.00'
+
+
+
+    if (dataInput.inputBill) {
+        console.log('Bill entered');
+    }
 
     return (
         <div className="screen">
@@ -24,7 +31,7 @@ function ScreenDisplay({tip, total, reset}) {
                 </div>
             </div>
             <div className="bottom">
-                <button id={tip!=='0.00' ? 'active-state' : 'blank'} onClick={reset}>Reset</button>
+                <button id={ (dataInput.inputBill || dataInput.inputPeople || dataInput.inputTip) ? 'active-state' : 'blank'} onClick={reset}>Reset</button>
             </div>
         </div>
     );
