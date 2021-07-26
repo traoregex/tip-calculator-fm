@@ -9,7 +9,9 @@
   text-align: center;
   position: absolute;
   bottom: 10px;
-  width: 100vw;
+  left: calc(100vw/2);
+  transform: translateX(-50%);
+  // width: 100%;
 }
 
 .main-wrapper {
@@ -25,6 +27,7 @@
 }
 
 .calculator {
+  
   margin-top: 60px;
   height: 440px;
   width: 920px;
@@ -91,9 +94,13 @@
   .attribution {
     font-size: 8px;
     bottom: 5px;
+    width: 100%;
+    transform: none;
+    left: 0;
   }
 
   .calculator {
+    position: relative;
     box-sizing: border-box;
     flex-direction: column;
     max-width: 375px;

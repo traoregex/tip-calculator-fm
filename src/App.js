@@ -88,13 +88,14 @@ function App() {
           <div className="display">
             <ScreenDisplay dataInput={dataInput} tip={tip} total={total} reset={onReset} />
           </div>
+          <div className="attribution">
+            Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+            Coded by <a rel="noreferrer" href="https://github.com/traoregex/tip-calculator-fm">TRAORE Geraud Lionel</a>.
+          </div>
         </div>
       </div>
     </div>
-    <div className="attribution">
-    Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
-    Coded by <a rel="noreferrer" href="https://github.com/traoregex/tip-calculator-fm">TRAORE Geraud Lionel</a>.
-  </div>
+    
     </div>
   );
 }
