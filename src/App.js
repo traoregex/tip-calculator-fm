@@ -70,7 +70,8 @@ function App() {
   }
 
   return (
-    <div className="flex-center">
+    <div>
+      <div className="flex-center">
       <div className="main-wrapper">
         <div className="title-wrapper">
           <h1>
@@ -89,10 +90,11 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="attribution">
-        Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
-        Coded by <a rel="noreferrer" href="https://github.com/traoregex/tip-calculator-fm">TRAORE Geraud Lionel</a>.
-      </div>
+    </div>
+    <div className="attribution">
+    Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+    Coded by <a rel="noreferrer" href="https://github.com/traoregex/tip-calculator-fm">TRAORE Geraud Lionel</a>.
+  </div>
     </div>
   );
 }
