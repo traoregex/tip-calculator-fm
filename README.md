@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-tip-calculator-using-react-sass-flexbox-and-grid-Je9DH9hrb)
-- Live Site URL: [Add live site URL here](https://traoregex.github.io/tip-calculator-fm/)
+- Solution URL: [frontendmentor.io/solutions](https://www.frontendmentor.io/solutions/responsive-tip-calculator-using-react-sass-flexbox-and-grid-Je9DH9hrb)
+- Live Site URL: [traoregex.github.io](https://traoregex.github.io/tip-calculator-fm/)
 
 
 ### Built with
